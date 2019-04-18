@@ -1,7 +1,10 @@
+const dotenv = require('dotenv')
 const geocode = require('./utils/geocode.js')
 const forecast = require('./utils/forecast.js')
 
 const address = process.argv[2]
+
+dotenv.config()
 
 if (!address) {
     console.log('Please provide an address')
